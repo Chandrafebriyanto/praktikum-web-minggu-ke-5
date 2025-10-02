@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace;
+  color: white;
+}
+
+.circle {
+  z-index: -99;
+  position: absolute;
+  width: 398px;
+  height: 398px;
+  background-color: #872341;
+  border-radius: 50%;
+  filter: blur(50px);
+  top: -150px;
+  left: -120px;
+}
+.circle1 {
+  z-index: -99;
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background-color: #e17564;
+  border-radius: 50%;
+  filter: blur(50px);
+  top: 220px;
+  right: 10px;
+  overflow: hidden;
+}
+.circle2 {
+  z-index: -99;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: #872341;
+  border-radius: 50%;
+  filter: blur(25px);
+  top: 558px;
+  left: 100px;
+}
+
+body {
+  background-color: #09122c;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#foto {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.container {
+  width: 400px;
+  height: auto;
+  background-image: linear-gradient(1deg, #872341, #09122c);
+  border: 2px solid white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-weight: bolder;
+  color: #e17564;
+}
+
+.contact {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.contact img {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  padding: 7px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.contact img:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: #e17564;
+}

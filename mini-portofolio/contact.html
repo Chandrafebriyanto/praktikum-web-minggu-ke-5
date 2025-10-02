@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="contact">
+    <div class="container">
+      <div class="background-element">
+        <div class="circle"></div>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+      </div>
+
+      <!-- tittle: menambahkan navbar -->
+      <nav id="navbar">
+        <div class="welcome">
+          <a href="index.html" id="username">Mini Portofolio</a>
+        </div>
+        <div class="navbar-link">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+
+      <div class="content-contact">
+        <h1>Message</h1>
+        <div class="container-message">
+          <div id="input-message">
+            <form action="">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" />
+
+              <label for="date">Email</label>
+              <input type="text" id="mail" name="mail" />
+
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Message"
+              ></textarea>
+
+              <button type="button" id="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
