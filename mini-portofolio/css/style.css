@@ -35,10 +35,10 @@ body::-webkit-scrollbar {
 
 /* tittle: style element container */
 .container {
-  margin: 50px 9%;
+  margin: 40px 9%;
 }
 
-/* tittle: membuat element bacground */
+/* tittle: membuat element background */
 .circle {
   z-index: -99;
   position: absolute;
@@ -126,6 +126,7 @@ body::-webkit-scrollbar {
   transition: 0.3s;
 }
 
+/* note: style index.html */
 .content-home {
   display: flex;
   justify-content: center;
@@ -164,7 +165,6 @@ body::-webkit-scrollbar {
   grid-row: auto;
 }
 
-/* grid 3 kolom horizontal */
 .project {
   padding: 20px;
   background-color: var(--fourth);
@@ -319,8 +319,73 @@ textarea {
   font-family: "roboto";
 }
 
-/* Responsif */
-@media screen and (max-width: 768px) {
+.toggle-switch {
+  justify-items: center;
+  position: relative;
+  width: 100px;
+  height: 50px;
+  --light: #d8dbe0;
+  --dark: #28292c;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+}
+
+.switch-label {
+  place-self: anchor-center;
+  margin: 0;
+  position: absolute;
+  width: 90px;
+  height: 40px;
+  background-color: var(--bg);
+  border-radius: 25px;
+  cursor: pointer;
+  border: 2px solid var(--light);
+}
+
+.checkbox {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
+  box-shadow: inset 12px -4px 0px 0px var(--light);
+  background-color: var(--bg);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider::before {
+  -webkit-transform: translateX(43px);
+  -ms-transform: translateX(43px);
+  transform: translateX(43px);
+  background-color: var(--bg);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* tittle: Responsif */
+@media screen and (max-width: 782px) {
   .container {
     margin: 20px 5%;
   }
@@ -406,9 +471,34 @@ textarea {
   .contact {
     overflow: visible;
   }
+  .switch-label{
+    width: 70px;
+    height: 30px;
+  }
+  .slider{
+    width: 100%;
+    height: 100%;
+  }
+  .checkbox{
+    display: none;
+  }
+  .slider::before{
+    width: 20px;
+    height: 20px;
+    top: 4px;
+    left: 7px;
+    -webkit-box-shadow: inset 8px -4px 0px 0px var(--light);
+    box-shadow: inset 8px -4px 0px 0px var(--light);
+    background-color: var(--bg);
+  }
+  .checkbox:checked ~ .slider::before{
+    -webkit-transform: translateX(33px);
+    -ms-transform: translateX(33px);
+    transform: translateX(33px);
+  }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   .about,
   .contact {
     overflow: visible;
@@ -416,72 +506,88 @@ textarea {
   .container {
     margin: 20px 3%;
   }
-
   .circle {
     width: 150px;
     height: 150px;
     top: -80px;
     left: -50px;
   }
-
   .circle1 {
     width: 100px;
     height: 100px;
     top: 200px;
     right: 10px;
   }
-
   .circle2 {
     width: 100px;
     height: 100px;
     top: 400px;
     left: 10px;
   }
-
   .circle3 {
     width: 100px;
     height: 100px;
     top: 120%;
     left: 20%;
   }
-
   #username {
     font-size: 1em;
     padding: 5px 10px;
   }
-
   .navbar-link a {
     padding: 0 3px;
     font-size: 0.8em;
   }
-
   .greeting {
     font-size: 1.2em;
     margin: 30% 0;
   }
-
   .projects {
     grid-template-columns: auto;
     grid-gap: 10px;
   }
-
   .project {
     max-width: 300px;
     min-height: 250px;
     margin: 10px 0;
   }
-
   .project img {
     width: 100px;
     height: auto;
   }
-
   #profile {
     display: inline;
   }
-
   .picture {
     justify-self: center;
     margin-bottom: 36px;
   }
+  .switch-label{
+    width: 60px;
+    height: 25px;
+  }
+  .slider{
+    width: 100%;
+    height: 100%;
+  }
+  .checkbox{
+    display: none;
+  }
+  .slider::before{
+    width: 15px;
+    height: 15px;
+    top: 4px;
+    left: 7px;
+    -webkit-box-shadow: inset 6px -4px 0px 0px var(--light);
+    box-shadow: inset 6px -4px 0px 0px var(--light);
+    background-color: var(--bg);
+  }
+  .checkbox:checked ~ .slider::before{
+    -webkit-transform: translateX(28px);
+    -ms-transform: translateX(28px);
+    transform: translateX(28px);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
 }
