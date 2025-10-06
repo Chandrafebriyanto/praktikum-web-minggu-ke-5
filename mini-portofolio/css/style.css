@@ -39,10 +39,10 @@ body::-webkit-scrollbar {
 }
 
 /* tittle: style about & contact */
-.about,
+/* .about,
 .contact {
   overflow: hidden;
-}
+} */
 
 /* tittle: membuat element background */
 .circle {
@@ -319,6 +319,7 @@ body::-webkit-scrollbar {
 /* tittle: style contact.html */
 .content-contact h1,
 .container-message {
+  margin-top: 0;
   display: flex;
   justify-content: center;
 }
@@ -369,10 +370,24 @@ textarea {
 }
 
 textarea {
-  height: 150px;
+  height: 100px;
   resize: none;
   border: 1px solid white;
   border-radius: 16px;
+}
+
+.textarea:focus,
+textarea:focus {
+  border-bottom: 1px solid var(--fourth);
+  border: 1px solid var(--fourth);
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-bottom: 1px solid var(--fourth);
+  transition: all 0.3s ease-in-out;
 }
 
 #input-message button {
@@ -382,6 +397,17 @@ textarea {
   border-radius: 7px;
   margin-top: 10px;
   font-weight: bolder;
+}
+
+#notification {
+  display: none;
+  justify-content: center;
+  justify-self: center;
+  width: 50%;
+  margin-top: -30px;
+  background-color: var(--fourth);
+  border-radius: 15px;
+  box-shadow: var(--fourth) 0px 5px 15px;;
 }
 
 /* tittle: Responsif */
@@ -667,4 +693,23 @@ body.light .checkbox:checked ~ .slider {
 body.light .hide {
   border: 2px solid #09122c;
   color: #09122c;
+}
+
+body.light #notification {
+  background-color: var(--third);
+}
+
+body.light #notification p {
+  color: white;
+}
+
+body.light .textarea:focus,
+body.light textarea:focus {
+  border: 1px solid var(--third);
+}
+
+body.light input[type="text"]:focus,
+body.light input[type="email"]:focus,
+body.light textarea:focus {
+  border-bottom: 1px solid var(--third); 
 }

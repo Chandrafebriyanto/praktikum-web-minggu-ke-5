@@ -1,3 +1,26 @@
+// tittle: fungsi hide and show profile
+let hide = () => {
+  let profile = document.querySelector(".picture");
+  let buttonHide = document.querySelector(".hide");
+  profile.style.display = "none";
+  buttonHide.textContent = "Tampilkan Profile";
+
+  if (buttonHide.textContent === "Tampilkan Profile") {
+    buttonHide.onclick = show;
+  }
+};
+
+let show = () => {
+  let profile = document.querySelector(".picture");
+  let buttonHide = document.querySelector(".hide");
+  profile.style.display = "block";
+  buttonHide.textContent = "Sembunyikan Profile";
+
+  if (buttonHide.textContent === "Sembunyikan Profile") {
+    buttonHide.onclick = hide;
+  }
+};
+
 // tittle: fungsi toggle theme light and dark
 document.addEventListener("DOMContentLoaded", function () {
   const themeToggleCheckbox = document.querySelector(
@@ -33,25 +56,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// tittle: fungsi hide and show profile
-let hide = () => {
-    let profile = document.querySelector(".picture");
-    let buttonHide = document.querySelector(".hide");
-    profile.style.display = "none";
-    buttonHide.textContent = "Tampilkan Profile";
+// tittle: fungsi submit form contact
+document.getElementById("submit").onclick = function submit() {
+  let username = document.getElementById("name").value.trim();
+  let email = document.getElementById("mail").value.trim();
+  let message = document.getElementById("message").value.trim();
 
-    if (buttonHide.textContent === "Tampilkan Profile") {
-        buttonHide.onclick = show;
-    }
-}
-
-let show = () => {
-    let profile = document.querySelector(".picture");
-    let buttonHide = document.querySelector(".hide");
-    profile.style.display = "block";
-    buttonHide.textContent = "Sembunyikan Profile";
-
-    if (buttonHide.textContent === "Sembunyikan Profile") {
-        buttonHide.onclick = hide;
-    }
-}
+  if (username === "" || email === "" || message === "") {
+    document.getElementById("notification").style.display = "flex";
+    document.getElementById("notification-message").textContent =
+      "Harap isi semua form!";
+    return;
+  } else {
+    document.getElementById("notification").style.display = "flex";
+    document.getElementById("notification-message").textContent = "Terima kasih telah mengirim pesan"
+  }
+};
