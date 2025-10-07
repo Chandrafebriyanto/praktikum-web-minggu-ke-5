@@ -39,10 +39,10 @@ body::-webkit-scrollbar {
 }
 
 /* tittle: style about & contact */
-/* .about,
+.about,
 .contact {
   overflow: hidden;
-} */
+}
 
 /* tittle: membuat element background */
 .circle {
@@ -142,6 +142,10 @@ body::-webkit-scrollbar {
   color: var(--third);
   transition: all 0.3s ease-in-out;
   transform: scale(1.1);
+}
+
+#focus {
+  border-bottom: var(--second) 3px solid;
 }
 
 .toggle-switch {
@@ -246,10 +250,9 @@ body::-webkit-scrollbar {
 
 .project:hover {
   background-color: var(--third);
-  transform: scale(1.1);
+  transform: translateY(-15px);
   box-shadow: var(--fourth) 0px 5px 15px;
   transition: 0.3s;
-  margin: 20px;
 }
 
 .describe {
@@ -292,6 +295,9 @@ body::-webkit-scrollbar {
 
 .picture {
   padding-right: 10%;
+  animation-name: floating;
+  animation-duration: 4s;
+  animation-iteration-count: infinite
 }
 
 .tittle {
@@ -407,7 +413,20 @@ textarea:focus {
   margin-top: -30px;
   background-color: var(--fourth);
   border-radius: 15px;
-  box-shadow: var(--fourth) 0px 5px 15px;;
+  box-shadow: var(--fourth) 0px 5px 15px;
+}
+
+/* tittle: animation*/
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* tittle: Responsif */
@@ -493,21 +512,26 @@ textarea:focus {
     font-family: "roboto";
     font-size: 0.9em;
   }
+
   .about,
   .contact {
     overflow: visible;
   }
+
   .switch-label {
     width: 70px;
     height: 30px;
   }
+
   .slider {
     width: 100%;
     height: 100%;
   }
+  
   .checkbox {
     display: none;
   }
+
   .slider::before {
     width: 20px;
     height: 20px;
@@ -517,6 +541,7 @@ textarea:focus {
     box-shadow: inset 8px -4px 0px 0px var(--light);
     background-color: var(--bg);
   }
+
   .checkbox:checked ~ .slider::before {
     -webkit-transform: translateX(33px);
     -ms-transform: translateX(33px);
@@ -529,76 +554,102 @@ textarea:focus {
   .contact {
     overflow: visible;
   }
+
   .container {
     margin: 20px 3%;
   }
+
   .circle {
     width: 150px;
     height: 150px;
     top: -80px;
     left: -50px;
   }
+
   .circle1 {
     width: 100px;
     height: 100px;
     top: 200px;
     right: 10px;
   }
+
   .circle2 {
     width: 100px;
     height: 100px;
     top: 400px;
     left: 10px;
   }
+
   .circle3 {
     width: 100px;
     height: 100px;
     top: 120%;
     left: 20%;
   }
+
   #username {
     font-size: 1em;
     padding: 5px 10px;
   }
+
   .navbar-link a {
     padding: 0 3px;
     font-size: 0.8em;
   }
+
   .greeting {
     font-size: 1.2em;
     margin: 30% 0;
   }
+
   .projects {
     grid-template-columns: auto;
     grid-gap: 10px;
   }
+
   .project {
     max-width: 300px;
     min-height: 250px;
     margin: 10px 0;
   }
+
   .project img {
     width: 100px;
     height: auto;
   }
+
   #profile {
     display: inline;
   }
+
   .picture {
     justify-self: center;
     margin-bottom: 36px;
   }
+
+  .toggle-switch{
+    display:none;
+  }
+  
   .switch-label {
     width: 60px;
     height: 25px;
   }
+
+  .switch-label {
+    width: 60px;
+    height: 25px;
+  }
+
   .slider {
     width: 100%;
     height: 100%;
   }
+  
   .checkbox {
     display: none;
   }
+
   .slider::before {
     width: 15px;
     height: 15px;
@@ -608,11 +659,13 @@ textarea:focus {
     box-shadow: inset 6px -4px 0px 0px var(--light);
     background-color: var(--bg);
   }
+
   .checkbox:checked ~ .slider::before {
     -webkit-transform: translateX(28px);
     -ms-transform: translateX(28px);
     transform: translateX(28px);
   }
+
 }
 
 /* tittle: style untuk light mode */
@@ -711,5 +764,21 @@ body.light textarea:focus {
 body.light input[type="text"]:focus,
 body.light input[type="email"]:focus,
 body.light textarea:focus {
-  border-bottom: 1px solid var(--third); 
+  border-bottom: 1px solid var(--third);
+}
+
+body.light #focus {
+  border-bottom: var(--third) 3px solid;
+}
+
+body.light #username {
+  background-image: linear-gradient(
+    90deg,
+    var(--second) 0%,
+    var(--fourth) 100%
+  );
+}
+
+body.light .box1{
+  background-color: var(--third);
 }

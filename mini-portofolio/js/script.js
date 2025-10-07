@@ -72,3 +72,4 @@ document.getElementById("submit").onclick = function submit() {
     document.getElementById("notification-message").textContent = "Terima kasih telah mengirim pesan"
   }
 };
+
