@@ -16,6 +16,7 @@
   text-decoration: none;
   font-family: "JetBrains Mono";
   color: white;
+  transition: all 0.3s ease-in-out;;
 }
 
 /* tittle: style smooth scroll */
@@ -678,6 +679,7 @@ body.light {
 
 body.light * {
   color: #09122c;
+  transition: all 0.3s ease-in-out;;
 }
 
 body.light #username,
