@@ -410,11 +410,12 @@ textarea:focus {
   display: none;
   justify-content: center;
   justify-self: center;
-  width: 50%;
+  width: fit-content;
+  padding: 2px 140px;
   margin-top: -30px;
   background-color: var(--fourth);
   border-radius: 15px;
-  box-shadow: var(--fourth) 0px 5px 15px;
+  box-shadow: var(--second) 0px 5px 15px;
 }
 
 /* tittle: animation*/

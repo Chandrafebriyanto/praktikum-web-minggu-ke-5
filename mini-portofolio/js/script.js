@@ -1,25 +1,25 @@
-// tittle: fungsi hide and show profile
-let hide = () => {
-  let profile = document.querySelector(".picture");
-  let buttonHide = document.querySelector(".hide");
-  profile.style.display = "none";
-  buttonHide.textContent = "Tampilkan Profile";
+// // tittle: fungsi hide and show profile
+// let hide = () => {
+//   let profile = document.querySelector(".picture");
+//   let buttonHide = document.querySelector(".hide");
+//   profile.style.display = "none";
+//   buttonHide.textContent = "Tampilkan Profile";
 
-  if (buttonHide.textContent === "Tampilkan Profile") {
-    buttonHide.onclick = show;
-  }
-};
+//   if (buttonHide.textContent === "Tampilkan Profile") {
+//     buttonHide.onclick = show;
+//   }
+// };
 
-let show = () => {
-  let profile = document.querySelector(".picture");
-  let buttonHide = document.querySelector(".hide");
-  profile.style.display = "block";
-  buttonHide.textContent = "Sembunyikan Profile";
+// let show = () => {
+//   let profile = document.querySelector(".picture");
+//   let buttonHide = document.querySelector(".hide");
+//   profile.style.display = "block";
+//   buttonHide.textContent = "Sembunyikan Profile";
 
-  if (buttonHide.textContent === "Sembunyikan Profile") {
-    buttonHide.onclick = hide;
-  }
-};
+//   if (buttonHide.textContent === "Sembunyikan Profile") {
+//     buttonHide.onclick = hide;
+//   }
+// };
 
 // tittle: fungsi toggle theme light and dark
 document.addEventListener("DOMContentLoaded", function () {
@@ -64,11 +64,13 @@ document.getElementById("submit").onclick = function submit() {
 
   if (username === "" || email === "" || message === "") {
     document.getElementById("notification").style.display = "flex";
+    document.getElementById("notification").style.backgroundColor = "#872341";
     document.getElementById("notification-message").textContent =
       "Harap isi semua form!";
     return;
   } else {
     document.getElementById("notification").style.display = "flex";
+    document.getElementById("notification").style.backgroundColor = "#e17564";
     document.getElementById("notification-message").textContent = "Terima kasih telah mengirim pesan"
   }
 };
